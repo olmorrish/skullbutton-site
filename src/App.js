@@ -1,13 +1,7 @@
-import NavBar from "./NavBar/NavBar";
 import MainPage from "./pages/MainPage";
 
 function App() {
-  return (
-    <div>
-      <NavBar/>
-      <MainPage/>
-    </div>
-  );
+  return <MainPage />;
 }
 
 export default App;
