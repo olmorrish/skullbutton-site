@@ -3,11 +3,16 @@ import GameWindow from "../GameWindow";
 import { Button, Popover } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 import { styled } from "styled-components";
+import LinesImage from '../resources/images/16x16_Lines.png';
 
-const SectionContainer = styled.div`
-  background-color: #3c3c3c;
+//   background: radial-gradient(circle, white, black);
+// background-color: #3c3c3c;
+const SectionContainer = styled.body`
   height: 100vh;
   width: 100vw;
+  background-image: url(${LinesImage}); /* Apply gradient background */
+  background-repeat: repeat;
+  background-size: 1.5% 3%; /* Scale the image up to be twice its original size */
 `;
 
 const StudioName = styled.h1`
@@ -28,7 +33,7 @@ const LogoContainer = styled.img`
 
 const content = (
   <div>
-    <p>Play video games.</p>
+    <p>Portfolio site on itch.io. Most games are playable in a browser.</p>
   </div>
 );
 
@@ -44,13 +49,9 @@ const MainPage = () => {
           <LogoContainer src={sbi} className="App-logo" alt="logo" />
           <StudioName>Skullbutton Interactive</StudioName>
         </header>
-        <Popover content={content} title="Itch.io">
-          <Button
-            shape="round"
-            size="large"
-            onClick={openItch}
-          >
-            <Text>Itch.io</Text>
+        <Popover content={content} title="itch.io">
+          <Button shape="round" size="large" onClick={openItch}>
+            <Text>itch.io</Text>
           </Button>
         </Popover>
       </div>
