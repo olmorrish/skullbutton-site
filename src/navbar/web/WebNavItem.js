@@ -24,17 +24,18 @@ const NavItemButton = styled.button`
   justify-content: center;
   align-items: center;
   border: 1px solid ${colors.navBarButtonPrimary};
+  cursor: pointer;
 
   &:hover {
-    background-color: ${(props) =>
-      props.primary ? "darkblue" : colors.navBarButtonPrimary};
+    background-color: ${colors.navBarButtonSecondary};
+    border: none;
   }
 
   &:active {
     transform: translateY(1px);
     background-color: ${(props) =>
-      props.primary ? "darkblue" : colors.navBarButtonSecondary};
-    border: 1px solid ${colors.navBarButtonSecondary};
+      props.primary ? "darkblue" : colors.navBarButtonOnClick};
+    border: none;
   }
 `;
 

@@ -15,7 +15,6 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 4px 8px rgba(1, 1, 1, 0.1);
 `;
 
 const NavItemList = styled.ul`

@@ -1,7 +1,8 @@
 const colors = {
-  navBarPrimary: "#252e2c",
-  navBarButtonPrimary: "#151c1b",
-  navBarButtonSecondary: "#0d1211",
+  navBarPrimary: "#2d3b3b",
+  navBarButtonPrimary: "#252e2c",
+  navBarButtonSecondary: "#151c1b",
+  navBarButtonOnClick: "#0d1211",
 };
 
 export default colors;
