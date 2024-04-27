@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import colors from "../../resources/colors";
 
 const Text = styled.b`
   color: black;
@@ -9,7 +10,7 @@ const Text = styled.b`
 const Header = styled.div`
   height: 10vh;
   width: 100vw;
-  background-color: #252e2c;
+  background-color: ${colors.navBarPrimary};
 `;
 
 const MobileNavBar = () => {

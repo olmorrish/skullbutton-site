@@ -1,19 +1,25 @@
-import { styled } from "styled-components";
 import { useEffect, useState } from "react";
-import WebNavBar from "./WebNavBar";
-import MobileNavBar from "./MobileNavBar";
+import WebNavBar from "./web/WebNavBar.js";
+import MobileNavBar from "./mobile/MobileNavBar.js";
 
-const Text = styled.b`
-  color: black;
-  font-family: "Anonymous Pro";
-  font-weight: 700;
-`;
-
-const Header = styled.div`
-  height: 10vh;
-  width: 100vw;
-  background-color: #252e2c;
-`;
+const navItems = [
+  {
+    title: "About",
+    onClick: () => console.log("Test"),
+  },
+  {
+    title: "Links",
+  },
+  {
+    title: "Games",
+  },
+  {
+    title: "Other Work",
+  },
+  {
+    title: "Contact",
+  },
+];
 
 const tabletBreakpoint = 768;
 
@@ -22,7 +28,6 @@ const ResponsiveNavBar = () => {
   const [windowWidth, setWindowWidth] = useState(1000);
 
   const handleResize = () => {
-    console.log(window.innerWidth);
     setWindowWidth(window.innerWidth);
   };
 
@@ -30,7 +35,11 @@ const ResponsiveNavBar = () => {
     window.addEventListener("resize", handleResize);
   });
 
-  return windowWidth <= tabletBreakpoint ? <MobileNavBar /> : <WebNavBar />;
+  return windowWidth <= tabletBreakpoint ? (
+    <MobileNavBar navItems={navItems} />
+  ) : (
+    <WebNavBar navItems={navItems} />
+  );
 };
 
 export default ResponsiveNavBar;

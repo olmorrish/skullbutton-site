@@ -1,7 +1,4 @@
 import sbi from "../resources/images/SBI3.png";
-import GameWindow from "../GameWindow.js";
-import { Button, Popover } from "antd";
-import { DownloadOutlined } from "@ant-design/icons";
 import { styled } from "styled-components";
 import LinesImage from "../resources/images/16x16_Lines.png";
 import LinkButton from "../components/LinkButton.js";
@@ -32,7 +29,6 @@ const LogoContainer = styled.img`
   margin: -20px -50px -50px -50px;
 `;
 
-// About, Social Links, Games, Other Work, Contact
 const MainPage = () => {
   return (
     <div>
