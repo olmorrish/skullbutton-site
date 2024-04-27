@@ -27,8 +27,12 @@ const WebNavBar = ({ navItems }) => {
   return (
     <Header>
       <NavItemList>
-        {navItems.map(navItem => (
-          <WebNavItem title={navItem.title} route={navItem.route} />
+        {navItems.map((navItem) => (
+          <WebNavItem
+            key={navItem.title}
+            title={navItem.title}
+            route={navItem.route}
+          />
         ))}
       </NavItemList>
     </Header>

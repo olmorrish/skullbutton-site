@@ -1,9 +1,10 @@
 import { styled } from "styled-components";
 import colors from "../../resources/colors";
 import { useNavigate } from "react-router-dom";
+import { MenuOutlined, DownOutlined } from "@ant-design/icons";
 
 const Text = styled.b`
-  color: ${colors.textPrimary};
+  color: white;
   font-family: "Anonymous Pro";
   font-weight: 700;
   font-size: 15pt;
@@ -17,9 +18,10 @@ const NavItemContainer = styled.li`
   height: 10vh;
 `;
 
+// TODO aside from min-width this is identical to the styling for the web nav buttons, make common
 const NavItemButton = styled.button`
   height: 10vh;
-  min-width: 10vw;
+  min-width: 20vw;
   background-color: ${colors.navBarPrimary};
   display: flex;
   justify-content: center;
@@ -40,20 +42,26 @@ const NavItemButton = styled.button`
   }
 `;
 
-const WebNavItem = ({ title, route }) => {
-  const navigate = useNavigate();
+const MobileNavMenuButton = ({ expanded, handleMenuButtonClick }) => {
   return (
     <NavItemContainer>
       <NavItemButton
         role="button"
-        onClick={() => {
-          navigate(route);
-        }}
+        onClick={handleMenuButtonClick}
+        aria-expanded={expanded}
       >
-        <Text>{title}</Text>
+        {expanded ? (
+          <DownOutlined
+            style={{ fontSize: "15pt", color: colors.textPrimary }}
+          />
+        ) : (
+          <MenuOutlined
+            style={{ fontSize: "15pt", color: colors.textPrimary }}
+          />
+        )}
       </NavItemButton>
     </NavItemContainer>
   );
 };
 
-export default WebNavItem;
+export default MobileNavMenuButton;

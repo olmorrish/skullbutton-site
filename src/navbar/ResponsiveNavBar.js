@@ -29,15 +29,16 @@ const tabletBreakpoint = 768;
 
 // Renders mobile or web nav bar based on window width
 const ResponsiveNavBar = () => {
-  const [windowWidth, setWindowWidth] = useState(1000);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
 
   useEffect(() => {
+    handleResize();
     window.addEventListener("resize", handleResize);
-  });
+  }, []);
 
   return windowWidth <= tabletBreakpoint ? (
     <MobileNavBar navItems={navItems} />

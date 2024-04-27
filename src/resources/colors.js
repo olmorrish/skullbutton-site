@@ -3,6 +3,7 @@ const colors = {
   navBarButtonPrimary: "#252e2c",
   navBarButtonSecondary: "#151c1b",
   navBarButtonOnClick: "#0d1211",
+  textPrimary: "#FFFFFF",
 };
 
 export default colors;
