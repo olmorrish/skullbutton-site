@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import colors from "../../resources/colors";
+import { useNavigate } from "react-router-dom";
 
 const Text = styled.b`
   color: white;
@@ -39,10 +40,16 @@ const NavItemButton = styled.button`
   }
 `;
 
-const WebNavItem = ({ title, onClick }) => {
+const WebNavItem = ({ title, route }) => {
+  const navigate = useNavigate();
   return (
     <NavItemContainer>
-      <NavItemButton role="button" onClick={onClick}>
+      <NavItemButton
+        role="button"
+        onClick={() => {
+          navigate(route);
+        }}
+      >
         <Text>{title}</Text>
       </NavItemButton>
     </NavItemContainer>

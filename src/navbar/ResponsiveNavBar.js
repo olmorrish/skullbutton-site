@@ -5,19 +5,23 @@ import MobileNavBar from "./mobile/MobileNavBar.js";
 const navItems = [
   {
     title: "About",
-    onClick: () => console.log("Test"),
+    route: '/about',
   },
   {
     title: "Links",
+    route: '/links',
   },
   {
     title: "Games",
+    route: '/games',
   },
   {
     title: "Other Work",
+    route: '/otherwork',
   },
   {
     title: "Contact",
+    route: '/contact',
   },
 ];
 

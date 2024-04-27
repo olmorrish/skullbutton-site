@@ -28,7 +28,7 @@ const WebNavBar = ({ navItems }) => {
     <Header>
       <NavItemList>
         {navItems.map(navItem => (
-          <WebNavItem title={navItem.title} onClick={navItem.onClick} />
+          <WebNavItem title={navItem.title} route={navItem.route} />
         ))}
       </NavItemList>
     </Header>
