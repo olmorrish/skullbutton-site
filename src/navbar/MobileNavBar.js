@@ -12,8 +12,8 @@ const Header = styled.div`
   background-color: #252e2c;
 `;
 
-const WebHeader = () => {
+const MobileNavBar = () => {
   return <Header />;
 };
 
-export default WebHeader;
+export default MobileNavBar;

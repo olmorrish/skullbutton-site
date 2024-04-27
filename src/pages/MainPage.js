@@ -1,11 +1,11 @@
 import sbi from "../resources/images/SBI3.png";
-import GameWindow from "../GameWindow";
+import GameWindow from "../GameWindow.js";
 import { Button, Popover } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 import { styled } from "styled-components";
 import LinesImage from "../resources/images/16x16_Lines.png";
 import LinkButton from "../components/LinkButton.js";
-import ResponsiveHeader from "../navbar/ResponsiveHeader.js";
+import ResponsiveNavBar from "../navbar/ResponsiveNavBar.js";
 
 const SectionContainer = styled.div`
   height: 100vh;
@@ -36,7 +36,7 @@ const LogoContainer = styled.img`
 const MainPage = () => {
   return (
     <div>
-      <ResponsiveHeader />
+      <ResponsiveNavBar />
       <SectionContainer>
         <div justify="center" align="center">
           <header className="App-header">

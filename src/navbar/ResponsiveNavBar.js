@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { useEffect, useState } from "react";
-import WebHeader from "./HeaderWeb";
-import MobileHeader from "./HeaderMobile";
+import WebNavBar from "./WebNavBar";
+import MobileNavBar from "./MobileNavBar";
 
 const Text = styled.b`
   color: black;
@@ -17,7 +17,8 @@ const Header = styled.div`
 
 const tabletBreakpoint = 768;
 
-const ResponsiveHeader = () => {
+// Renders mobile or web nav bar based on window width
+const ResponsiveNavBar = () => {
   const [windowWidth, setWindowWidth] = useState(1000);
 
   const handleResize = () => {
@@ -29,7 +30,7 @@ const ResponsiveHeader = () => {
     window.addEventListener("resize", handleResize);
   });
 
-  return windowWidth <= tabletBreakpoint ? <MobileHeader /> : <WebHeader />;
+  return windowWidth <= tabletBreakpoint ? <MobileNavBar /> : <WebNavBar />;
 };
 
-export default ResponsiveHeader;
+export default ResponsiveNavBar;
