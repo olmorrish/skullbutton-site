@@ -5,6 +5,7 @@ import { DownloadOutlined } from "@ant-design/icons";
 import { styled } from "styled-components";
 import LinesImage from "../resources/images/16x16_Lines.png";
 import LinkButton from "./LinkButton";
+import ResponsiveHeader from "./ResponsiveHeader";
 
 //   background: radial-gradient(circle, white, black);
 // background-color: #3c3c3c;
@@ -30,38 +31,42 @@ const StudioName = styled.h1`
 `;
 
 const LogoContainer = styled.img`
-  margin: auto -50px -50px -50px;
+  margin: -20px -50px -50px -50px;
 `;
 
+// About, Social Links, Games, Other Work, Contact
 const MainPage = () => {
   return (
-    <SectionContainer>
-      <div justify="center" align="center">
-        <header className="App-header">
-          <LogoContainer src={sbi} className="App-logo" alt="logo" />
-          <StudioName>Skullbutton Interactive</StudioName>
-        </header>
-        <ButtonContainer>
-          <LinkButton
-            name="itch.io"
-            content="Portfolio site on itch.io. Most games are playable in a browser."
-            onClick={() => {
-              window.open("http://www.skullbutton.com", "_blank");
-            }}
-          />
-          <LinkButton
-            name="VSCS-II"
-            content="A game about privacy, security, and AI."
-            onClick={() => {
-              window.open(
-                "https://store.steampowered.com/app/1528590/VSCSII/",
-                "_blank"
-              );
-            }}
-          />
-        </ButtonContainer>
-      </div>
-    </SectionContainer>
+    <div>
+      <ResponsiveHeader />
+      <SectionContainer>
+        <div justify="center" align="center">
+          <header className="App-header">
+            <LogoContainer src={sbi} className="App-logo" alt="logo" />
+            <StudioName>Skullbutton Interactive</StudioName>
+          </header>
+          <ButtonContainer>
+            <LinkButton
+              name="itch.io"
+              content="Portfolio site on itch.io. Most games are playable in a browser."
+              onClick={() => {
+                window.open("http://www.skullbutton.com", "_blank");
+              }}
+            />
+            <LinkButton
+              name="VSCS-II"
+              content="A game about privacy, security, and AI."
+              onClick={() => {
+                window.open(
+                  "https://store.steampowered.com/app/1528590/VSCSII/",
+                  "_blank"
+                );
+              }}
+            />
+          </ButtonContainer>
+        </div>
+      </SectionContainer>
+    </div>
   );
 };
 
