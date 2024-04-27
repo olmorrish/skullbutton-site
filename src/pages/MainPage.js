@@ -4,11 +4,9 @@ import { Button, Popover } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 import { styled } from "styled-components";
 import LinesImage from "../resources/images/16x16_Lines.png";
-import LinkButton from "./LinkButton";
-import ResponsiveHeader from "./ResponsiveHeader";
+import LinkButton from "../components/LinkButton.js";
+import ResponsiveHeader from "../navbar/ResponsiveHeader.js";
 
-//   background: radial-gradient(circle, white, black);
-// background-color: #3c3c3c;
 const SectionContainer = styled.div`
   height: 100vh;
   width: 100vw;
