@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 import colors from "../../resources/colors";
-import { useNavigate } from "react-router-dom";
-import { MenuOutlined, DownOutlined } from "@ant-design/icons";
+import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 
 const Text = styled.b`
   color: white;
@@ -36,8 +35,7 @@ const NavItemButton = styled.button`
 
   &:active {
     transform: translateY(1px);
-    background-color: ${(props) =>
-      props.primary ? "darkblue" : colors.navBarButtonOnClick};
+    background-color: ${colors.navBarButtonOnClick};
     border: none;
   }
 `;
@@ -51,7 +49,7 @@ const MobileNavMenuButton = ({ expanded, handleMenuButtonClick }) => {
         aria-expanded={expanded}
       >
         {expanded ? (
-          <DownOutlined
+          <CloseOutlined
             style={{ fontSize: "15pt", color: colors.textPrimary }}
           />
         ) : (

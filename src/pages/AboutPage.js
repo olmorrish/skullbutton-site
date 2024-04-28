@@ -1,6 +1,7 @@
 import sbi from "../resources/images/SBI3.png";
 import LinkButton from "../components/LinkButton.js";
 import { styled } from "styled-components";
+import { TextBlock, SectionHeader } from "../resources/styles.js";
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -20,13 +21,14 @@ const LogoContainer = styled.img`
   margin: -20px -50px -50px -50px;
 `;
 
+//TODO add an H1, preferably styled
 const AboutPage = (
   <div justify="center" align="center">
     <header className="App-header">
       <LogoContainer src={sbi} className="App-logo" alt="logo" />
       <StudioName>Skullbutton Interactive</StudioName>
     </header>
-    <ButtonContainer>
+    {/* <ButtonContainer>
       <LinkButton
         name="itch.io"
         content="Portfolio site on itch.io. Most games are playable in a browser."
@@ -44,7 +46,7 @@ const AboutPage = (
           );
         }}
       />
-    </ButtonContainer>
+    </ButtonContainer> */}
   </div>
 );
 

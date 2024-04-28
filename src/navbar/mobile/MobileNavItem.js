@@ -5,14 +5,14 @@ import { BoldText } from "../../resources/styles";
 
 // Spacing + horizontal styling
 const NavItemContainer = styled.li`
-  display: inline-block;
+  display: inline;
   margin-right: 0px;
-  height: 10vh;
+  height: 90bh
 `;
 
 const NavItemButton = styled.button`
   height: 10vh;
-  min-width: 10vw;
+  width: 100vw;
   background-color: ${colors.navBarPrimary};
   display: flex;
   justify-content: center;
@@ -26,14 +26,13 @@ const NavItemButton = styled.button`
   }
 
   &:active {
-    transform: translateY(1px);
-    background-color: ${(props) =>
-      props.primary ? "darkblue" : colors.navBarButtonOnClick};
+    transform: translateX(1px);
+    background-color: ${colors.navBarButtonOnClick};
     border: none;
   }
 `;
 
-const WebNavItem = ({ title, route }) => {
+const MobileNavItem = ({ title, route, onNavigation }) => {
   const navigate = useNavigate();
   return (
     <NavItemContainer>
@@ -41,6 +40,7 @@ const WebNavItem = ({ title, route }) => {
         role="button"
         onClick={() => {
           navigate(route);
+          onNavigation();
         }}
       >
         <BoldText>{title}</BoldText>
@@ -49,4 +49,4 @@ const WebNavItem = ({ title, route }) => {
   );
 };
 
-export default WebNavItem;
+export default MobileNavItem;
