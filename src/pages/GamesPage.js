@@ -2,6 +2,7 @@ import { Grid } from "antd";
 import sbi from "../resources/images/SBI3.png";
 import { styled } from "styled-components";
 import GamePreviewButton from "../components/GamePreviewButton";
+import cardinal from "../resources/images/cardinal.png";
 
 const StudioName = styled.h1`
   color: white;
@@ -14,7 +15,7 @@ const LogoContainer = styled.img`
 `;
 
 const GameGridContainer = styled.div`
-  padding: 20px 300px 20px;
+  padding: auto 300px auto;
 `;
 
 const GamesPage = (
@@ -24,7 +25,7 @@ const GamesPage = (
       <StudioName>Games</StudioName>
     </header>
     <GameGridContainer>
-      <GamePreviewButton route="/games/cardinal" gameTitle="Cardinal"/>
+      <GamePreviewButton route="/games/cardinal" gameTitle="Cardinal" image={cardinal}/>
     </GameGridContainer>
   </div>
 );

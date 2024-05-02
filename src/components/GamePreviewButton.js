@@ -1,7 +1,5 @@
 import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
-import cardinal from "../resources/images/cardinal.png";
-import colors from "../resources/colors";
 import { TextBlock } from "../resources/styles";
 
 const GameInfoContainer = styled.div`
@@ -11,19 +9,22 @@ const GameInfoContainer = styled.div`
 const PreviewImage = styled.img`
   border: none;
   border-radius: 10px;
+  width: 300px;
 
   &:hover {
     filter: grayscale(50%);
+    transition: .5s ease;
     border: none;
+    cursor: pointer;
   }
 
   &:active {
     filter: grayscale(100%);
+    transform: translateY(10px);
   }
 `;
 
-// TODO: a11y: is this a link or a button?
-const GamePreviewButton = ({ route, gameTitle }) => {
+const GamePreviewButton = ({ route, gameTitle, image }) => {
   const navigate = useNavigate();
   return (
     <GameInfoContainer>
@@ -34,7 +35,7 @@ const GamePreviewButton = ({ route, gameTitle }) => {
           navigate(route);
         }}
       >
-        <PreviewImage src={cardinal} />
+        <PreviewImage src={image} />
       </div>
       <TextBlock>{gameTitle}</TextBlock>
     </GameInfoContainer>
