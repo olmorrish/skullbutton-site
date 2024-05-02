@@ -12,7 +12,7 @@ const LogoContainer = styled.img`
 `;
 
 const GamesPage = (
-    <div justify="center" align="center">
+  <div justify="center" align="center">
     <header className="App-header">
       <LogoContainer src={sbi} className="App-logo" alt="logo" />
       <StudioName>Games</StudioName>

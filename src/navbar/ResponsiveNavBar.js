@@ -4,6 +4,10 @@ import MobileNavBar from "./mobile/MobileNavBar.js";
 
 const navItems = [
   {
+    title: "Home",
+    route: '/',
+  },
+  {
     title: "About",
     route: '/about',
   },

@@ -1,18 +1,25 @@
 import { styled } from "styled-components";
 import LinesImage from "./resources/images/16x16_Lines.png";
 import ResponsiveNavBar from "./navbar/ResponsiveNavBar.js";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import AboutPage from "./pages/AboutPage.js";
 import ContactsPage from "./pages/ContactPage.js";
 import GamesPage from "./pages/GamesPage.js";
+import HomePage from "./pages/HomePage.js";
 import LinksPage from "./pages/LinksPage.js";
 import NotFoundPage from "./pages/NotFoundPage.js";
 import OtherWorkPage from "./pages/OtherWorkPage.js";
+import CardinalGamePage from "./pages/games/CardinalGamePage.js";
 
 const SectionContainer = styled.div`
   height: 100vh;
   width: 100vw;
-  background-image: url(${LinesImage}); /* Apply gradient background */
+  background-image: url(${LinesImage});
   background-repeat: cover;
 `;
 
@@ -22,11 +29,11 @@ const App = () => {
       <ResponsiveNavBar />
       <SectionContainer>
         <Routes>
-          <Route exact path="/" element={<Navigate to="/about" />}/>
-          <Route exact from="/" to="/about" />
+          <Route exact path="/" element={HomePage} />
           <Route path="/about" element={AboutPage} />
           <Route path="/links" element={LinksPage} />
           <Route path="/games" element={GamesPage} />
+          <Route path="/games/cardinal" element={CardinalGamePage} />
           <Route path="/otherwork" element={OtherWorkPage} />
           <Route path="/contact" element={ContactsPage} />
           <Route path="*" element={NotFoundPage} />
