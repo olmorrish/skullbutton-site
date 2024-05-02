@@ -6,6 +6,7 @@ const StudioName = styled.h1`
   font-weight: 700;
 `;
 
+// TODO all game pages need a back button, make this page generic and extensible
 const CardinalGamePage = (
   <div>
     <div justify="center" align="center">
