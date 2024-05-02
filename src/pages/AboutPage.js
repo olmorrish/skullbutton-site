@@ -28,42 +28,6 @@ const AboutPage = (
       <LogoContainer src={sbi} className="App-logo" alt="logo" />
       <StudioName>Skullbutton Interactive</StudioName>
     </header>
-    <SectionHeader>About Me</SectionHeader>
-    <TextBlock>
-      Hi, I'm Oliver, and you've found my website. "Skullbutton" is a
-      psuedo-screen-name and pseudo-studio-name under which I publish my games,
-      which are often (but not always) solo projects.
-    </TextBlock>
-    <TextBlock>
-      More about me: I'm a bundle of atoms and electrical impulses that has
-      coalesced into something some people would call a "programmer" and the
-      more generous would call a "writer".
-    </TextBlock>
-    <SectionHeader>About My Work</SectionHeader>
-    <TextBlock>
-      My contributions to the artistic landscape are a mish-mosh of hacked
-      together prototypes, weird experimental games, and long branching
-      narrative experiences. I try to use my background in theoretical computer
-      science to inspire my work, which results in projects like a lo-fi Enigma
-      machine simulator and an idle game about monkeys writing Shakespeare.
-    </TextBlock>
-    <TextBlock>I don't only create games, hence "Interactive". </TextBlock>
-    <SectionHeader>Why a Skull?</SectionHeader>
-    <TextBlock>
-      Skulls have a bad reputation, probably because a bunch of
-      less-than-savoury groups like to say "hey, death is cool, we cause a lot
-      of that" and promptly adopt it without a second thought.
-    </TextBlock>
-    <TextBlock>
-      Obviously the Skullbutton art is a reference to the Jolly Roger, and
-      that's intentional. But it's more of an totem of digital freedom rather
-      than nautical.
-    </TextBlock>
-    <TextBlock>
-      But skulls? Everyone's got one. Nobody keeps it forever and it's with you
-      for the whole ride. Your skull is a different shape from mine, but I'm
-      certainly no phrenologist. I'm just happy you're here.
-    </TextBlock>
     {/* <ButtonContainer>
       <LinkButton
         name="itch.io"
