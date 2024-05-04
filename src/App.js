@@ -13,16 +13,21 @@ import { gameData } from "./gameData.js";
 import EmbeddedGamePage from "./pages/games/EmbeddedGamePage.js";
 
 const Background = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+  padding: 0px 0px 150px;
   background-image: url(${LinesImage});
   background-repeat: cover;
+`;
+
+const BottomPadding = styled.div`
+  height: 100px;
 `;
 
 const App = () => {
   return (
     <Router>
-      <Background>
+      <Background id="background-layer">
         <ResponsiveNavBar />
         <Routes>
           <Route exact path="/" element={HomePage} />

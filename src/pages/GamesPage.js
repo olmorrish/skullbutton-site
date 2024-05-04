@@ -36,7 +36,7 @@ const GamesPage = () => {
         <LogoContainer src={sbi} className="App-logo" alt="logo" />
         <StudioName>Games</StudioName>
       </header>
-      <GameGridContainer id="GameGridContainer">
+      <GameGridContainer id="game-grid-container">
         <GameGrid>
           {gameData.map((game) => (
             <GamePreviewButton
