@@ -2,7 +2,7 @@ import { Grid } from "antd";
 import sbi from "../resources/images/SBI3.png";
 import { styled } from "styled-components";
 import GamePreviewButton from "../components/GamePreviewButton";
-import cardinal from "../resources/images/cardinal.png";
+import { gameData } from "../gameData";
 
 const StudioName = styled.h1`
   color: white;
@@ -25,7 +25,14 @@ const GamesPage = (
       <StudioName>Games</StudioName>
     </header>
     <GameGridContainer>
-      <GamePreviewButton route="/games/cardinal" gameTitle="Cardinal" image={cardinal}/>
+      {gameData.map((game) => (
+          <GamePreviewButton
+            key={game.title}
+            route={`/games${game.routeSlug}`}
+            gameTitle={game.title}
+            image={game.image}
+          />
+        ))}
     </GameGridContainer>
   </div>
 );

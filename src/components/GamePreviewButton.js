@@ -20,7 +20,6 @@ const PreviewImage = styled.img`
 
   &:active {
     filter: grayscale(100%);
-    transform: translateY(10px);
   }
 `;
 

@@ -14,7 +14,8 @@ import HomePage from "./pages/HomePage.js";
 import LinksPage from "./pages/LinksPage.js";
 import NotFoundPage from "./pages/NotFoundPage.js";
 import OtherWorkPage from "./pages/OtherWorkPage.js";
-import CardinalGamePage from "./pages/games/CardinalGamePage.js";
+import { gameData } from "./gameData.js";
+import EmbeddedGamePage from "./pages/games/EmbeddedGamePage.js";
 
 const SectionContainer = styled.div`
   height: 100vh;
@@ -33,7 +34,13 @@ const App = () => {
           <Route path="/about" element={AboutPage} />
           <Route path="/links" element={LinksPage} />
           <Route path="/games" element={GamesPage} />
-          <Route path="/games/cardinal" element={CardinalGamePage} />
+          {gameData.map((game) => (
+            <Route
+              key={game.title}
+              path={`/games${game.routeSlug}`}
+              element={EmbeddedGamePage} //TODO need to pass props to this next; generalize
+            />
+          ))}
           <Route path="/otherwork" element={OtherWorkPage} />
           <Route path="/contact" element={ContactsPage} />
           <Route path="*" element={NotFoundPage} />

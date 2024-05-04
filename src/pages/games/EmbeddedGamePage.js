@@ -7,7 +7,7 @@ const StudioName = styled.h1`
 `;
 
 // TODO all game pages need a back button, make this page generic and extensible
-const CardinalGamePage = (
+const EmbeddedGamePage = (
   <div>
     <div justify="center" align="center">
       <iframe
@@ -25,4 +25,4 @@ const CardinalGamePage = (
   </div>
 );
 
-export default CardinalGamePage;
+export default EmbeddedGamePage;
