@@ -12,7 +12,7 @@ import OtherWorkPage from "./pages/OtherWorkPage.js";
 import { gameData } from "./gameData.js";
 import EmbeddedGamePage from "./pages/games/EmbeddedGamePage.js";
 
-const SectionContainer = styled.div`
+const Background = styled.div`
   height: 100vh;
   width: 100vw;
   background-image: url(${LinesImage});
@@ -22,8 +22,8 @@ const SectionContainer = styled.div`
 const App = () => {
   return (
     <Router>
-      <ResponsiveNavBar />
-      <SectionContainer>
+      <Background>
+        <ResponsiveNavBar />
         <Routes>
           <Route exact path="/" element={HomePage} />
           <Route path="/about" element={AboutPage} />
@@ -33,14 +33,14 @@ const App = () => {
             <Route
               key={game.title}
               path={`/games${game.routeSlug}`}
-              element={<EmbeddedGamePage content={game.content} />} //TODO need to pass props to this next; generalize
+              element={<EmbeddedGamePage content={game.content} />}
             />
           ))}
           <Route path="/otherwork" element={OtherWorkPage} />
           <Route path="/contact" element={ContactsPage} />
           <Route path="*" element={NotFoundPage} />
         </Routes>
-      </SectionContainer>
+      </Background>
     </Router>
   );
 };

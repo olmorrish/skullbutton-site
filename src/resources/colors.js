@@ -4,6 +4,8 @@ const colors = {
   navBarButtonSecondary: "#151c1b",
   navBarButtonOnClick: "#0d1211",
   textPrimary: "#FFFFFF",
+  textLinkOnHover: '#c4ffe2',
+  textLinkOnClick: '#9fd6bb'
 };
 
 export default colors;

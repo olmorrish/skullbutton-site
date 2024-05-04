@@ -15,7 +15,7 @@ const ContactsPage = (
     <div justify="center" align="center">
     <header className="App-header">
       <LogoContainer src={sbi} className="App-logo" alt="logo" />
-      <StudioName>Contacts</StudioName>
+      <StudioName>Contact</StudioName>
     </header>
   </div>
 );

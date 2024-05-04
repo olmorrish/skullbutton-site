@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import BackLink from "../../components/BackLink";
 
 const StudioName = styled.h1`
   color: white;
@@ -7,21 +8,22 @@ const StudioName = styled.h1`
 `;
 
 const GameContainer = styled.div`
-  justify: "center";
-  align: "center";
+  justify: center;
+  align: center;
 `;
 
 const BackButtonContainer = styled.div`
-  margin: 10px 50px 50px;
+  margin: 20px 50px 20px;
 `;
 
 // TODO all game pages need a back button
 const EmbeddedGamePage = ({ content }) => {
   return (
     <div>
-      <GameContainer justify="center" align="center">
-        {content}
-      </GameContainer>
+      <BackButtonContainer>
+        <BackLink text="<games" route="/games"/>
+      </BackButtonContainer>
+      <GameContainer align="center">{content}</GameContainer>
     </div>
   );
 };
