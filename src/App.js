@@ -28,7 +28,7 @@ const App = () => {
           <Route exact path="/" element={HomePage} />
           <Route path="/about" element={AboutPage} />
           <Route path="/links" element={LinksPage} />
-          <Route path="/games" element={GamesPage} />
+          <Route path="/games" element={<GamesPage />} />
           {gameData.map((game) => (
             <Route
               key={game.title}
