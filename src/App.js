@@ -38,7 +38,13 @@ const App = () => {
             <Route
               key={game.title}
               path={`/games${game.routeSlug}`}
-              element={<EmbeddedGamePage content={game.content} />}
+              element={
+                game.embedded ? (
+                  <EmbeddedGamePage content={game.content} />
+                ) : (
+                  <EmbeddedGamePage content={<div>TODO</div>} />
+                )
+              }
             />
           ))}
           <Route path="/otherwork" element={OtherWorkPage} />

@@ -1,19 +1,20 @@
 import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { TextBlock } from "../resources/styles";
+import { GameTitle } from "../resources/styles";
 
 const GameInfoContainer = styled.div`
-  display: inline-block; /*shrink to fit content*/
+  justify-content: center;
 `;
 
+// TODO the height is set to make consistent along rows; switch to width of 300 on small view?
 const PreviewImage = styled.img`
   border: none;
   border-radius: 10px;
-  width: 300px;
+  height: 250px;
 
   &:hover {
     filter: grayscale(50%);
-    transition: .5s ease;
+    transition: 0.5s ease;
     border: none;
     cursor: pointer;
   }
@@ -27,16 +28,15 @@ const GamePreviewButton = ({ route, gameTitle, image }) => {
   const navigate = useNavigate();
   return (
     <GameInfoContainer>
-      <div
+      <PreviewImage
+        src={image}
         role="link"
         alt={gameTitle}
         onClick={() => {
           navigate(route);
         }}
-      >
-        <PreviewImage src={image} />
-      </div>
-      <TextBlock>{gameTitle}</TextBlock>
+      />
+      <GameTitle>{gameTitle}</GameTitle>
     </GameInfoContainer>
   );
 };

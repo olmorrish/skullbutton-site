@@ -17,6 +17,15 @@ export const TextBlock = styled.p`
   padding: 0px 35px 0px;
 `;
 
+export const GameTitle = styled.p`
+  color: ${colors.textPrimary};
+  font-family: "Anonymous Pro";
+  font-weight: 700;
+  font-size: 12pt;
+  padding: 0px 35px 0px;
+  vertical-align: bottom;
+`;
+
 export const BoldText = styled.b`
   color: ${colors.textPrimary};
   font-family: "Anonymous Pro";

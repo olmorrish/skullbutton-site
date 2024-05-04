@@ -16,7 +16,6 @@ const BackButtonContainer = styled.div`
   margin: 20px 50px 20px;
 `;
 
-// TODO all game pages need a back button
 const EmbeddedGamePage = ({ content }) => {
   return (
     <div>

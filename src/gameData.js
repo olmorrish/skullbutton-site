@@ -3,6 +3,8 @@ import yarb from "./resources/images/yarb.gif";
 import byteSizedEnigma from "./resources/images/byteSizedEnigma.png";
 import infiniteMonkeys from "./resources/images/infiniteMonkeys.gif";
 import springChicken from "./resources/images/springChicken.gif";
+import vscsii from "./resources/images/vscsii.png";
+import bitcrush from "./resources/images/bitcrush.gif";
 
 const cardinalContent = (
   <iframe
@@ -69,33 +71,57 @@ const springChickenContent = (
 
 export const gameData = [
   {
+    title: "VSCS-II",
+    routeSlug: "/vscs-ii",
+    image: vscsii,
+    embedded: false,
+    year: 2024,
+  },
+  {
     title: "Cardinal",
     routeSlug: "/cardinal",
     image: cardinal,
+    embedded: true,
     content: cardinalContent,
+    year: 2022,
   },
   {
-    title: "YARB",
-    routeSlug: "/yarb",
-    image: yarb,
-    content: yarbContent,
+    title: "BiTCRUSH",
+    routeSlug: "/BiTCRUSH",
+    image: bitcrush,
+    embedded: false,
+    year: 2020,
   },
   {
     title: "Byte-Sized Enigma",
     routeSlug: "/enigma",
     image: byteSizedEnigma,
+    embedded: true,
     content: byteSizedEnigmaContent,
+    year: 2021,
   },
   {
     title: "Infinite Monkeys",
     routeSlug: "/infinitemonkeys",
     image: infiniteMonkeys,
+    embedded: true,
     content: infiniteMonkeysContent,
+    year: 2021,
   },
   {
     title: "Spring Chicken",
     routeSlug: "/springchicken",
     image: springChicken,
+    embedded: true,
     content: springChickenContent,
+    year: 2021,
+  },
+  {
+    title: "YARB",
+    routeSlug: "/YARB",
+    image: yarb,
+    embedded: true,
+    content: yarbContent,
+    year: 2023,
   },
 ];
