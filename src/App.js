@@ -1,12 +1,7 @@
 import { styled } from "styled-components";
 import LinesImage from "./resources/images/16x16_Lines.png";
 import ResponsiveNavBar from "./navbar/ResponsiveNavBar.js";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AboutPage from "./pages/AboutPage.js";
 import ContactsPage from "./pages/ContactPage.js";
 import GamesPage from "./pages/GamesPage.js";
@@ -38,7 +33,7 @@ const App = () => {
             <Route
               key={game.title}
               path={`/games${game.routeSlug}`}
-              element={EmbeddedGamePage} //TODO need to pass props to this next; generalize
+              element={<EmbeddedGamePage content={game.content} />} //TODO need to pass props to this next; generalize
             />
           ))}
           <Route path="/otherwork" element={OtherWorkPage} />
