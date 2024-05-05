@@ -1,13 +1,8 @@
-import { Grid } from "antd";
-import sbi from "../resources/images/SBI3.png";
 import { styled } from "styled-components";
 import GamePreviewButton from "../components/GamePreviewButton";
 import { gameData } from "../gameData";
 import { PageHeader } from "../resources/styles";
-
-const LogoContainer = styled.img`
-  margin: -20px -50px -50px -50px;
-`;
+import { BigLogo } from "../components/Logo";
 
 // TODO this is never passed the small prop, so we get a margin on small view
 // practice: implement context so we can get mobile state?
@@ -28,7 +23,7 @@ const GamesPage = () => {
   return (
     <div justify="center" align="center">
       <header className="App-header">
-        <LogoContainer src={sbi} className="App-logo" alt="logo" />
+        <BigLogo />
         <PageHeader id="header">Games</PageHeader>
       </header>
       <GameGridContainer id="game-grid-container">

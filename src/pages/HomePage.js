@@ -1,8 +1,7 @@
-import sbi from "../resources/images/SBI3.png";
-import LinkButton from "../components/LinkButton.js";
 import { styled } from "styled-components";
 import { TextBlock, SectionHeader } from "../resources/styles.js";
 import { PageHeader } from "../resources/styles";
+import { BigLogo } from "../components/Logo";
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -12,15 +11,11 @@ const ButtonContainer = styled.div`
   align-items: center;
 `;
 
-const LogoContainer = styled.img`
-  margin: -20px -50px -50px -50px;
-`;
-
 //TODO add an H1, preferably styled
 const AboutPage = (
   <div justify="center" align="center">
     <header className="App-header">
-      <LogoContainer src={sbi} className="App-logo" alt="logo" />
+      <BigLogo />
       <PageHeader>Skullbutton Interactive</PageHeader>
     </header>
     {/* <ButtonContainer>

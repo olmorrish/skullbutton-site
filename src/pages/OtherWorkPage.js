@@ -1,15 +1,10 @@
-import sbi from "../resources/images/SBI3.png";
-import { styled } from "styled-components";
 import { PageHeader } from "../resources/styles";
-
-const LogoContainer = styled.img`
-  margin: -20px -50px -50px -50px;
-`;
+import { BigLogo } from "../components/Logo";
 
 const OtherWorkPage = (
-    <div justify="center" align="center">
+  <div justify="center" align="center">
     <header className="App-header">
-      <LogoContainer src={sbi} className="App-logo" alt="logo" />
+      <BigLogo />
       <PageHeader>Other Work</PageHeader>
     </header>
   </div>

@@ -5,6 +5,8 @@ export const PageHeader = styled.h1`
   color: white;
   font-family: "Anonymous Pro";
   font-weight: 700;
+  font-size: 35pt;
+  margin: auto auto 20px;
 `;
 
 export const SectionHeader = styled.h2`
