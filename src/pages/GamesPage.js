@@ -3,12 +3,7 @@ import sbi from "../resources/images/SBI3.png";
 import { styled } from "styled-components";
 import GamePreviewButton from "../components/GamePreviewButton";
 import { gameData } from "../gameData";
-
-const StudioName = styled.h1`
-  color: white;
-  font-family: "Anonymous Pro";
-  font-weight: 700;
-`;
+import { PageHeader } from "../resources/styles";
 
 const LogoContainer = styled.img`
   margin: -20px -50px -50px -50px;
@@ -34,7 +29,7 @@ const GamesPage = () => {
     <div justify="center" align="center">
       <header className="App-header">
         <LogoContainer src={sbi} className="App-logo" alt="logo" />
-        <StudioName>Games</StudioName>
+        <PageHeader id="header">Games</PageHeader>
       </header>
       <GameGridContainer id="game-grid-container">
         <GameGrid>

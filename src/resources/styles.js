@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import colors from "./colors";
 
+export const PageHeader = styled.h1`
+  color: white;
+  font-family: "Anonymous Pro";
+  font-weight: 700;
+`;
+
 export const SectionHeader = styled.h2`
   color: ${colors.textPrimary};
   font-family: "Anonymous Pro";

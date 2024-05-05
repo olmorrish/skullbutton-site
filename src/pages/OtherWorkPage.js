@@ -1,11 +1,6 @@
 import sbi from "../resources/images/SBI3.png";
 import { styled } from "styled-components";
-
-const StudioName = styled.h1`
-  color: white;
-  font-family: "Anonymous Pro";
-  font-weight: 700;
-`;
+import { PageHeader } from "../resources/styles";
 
 const LogoContainer = styled.img`
   margin: -20px -50px -50px -50px;
@@ -15,7 +10,7 @@ const OtherWorkPage = (
     <div justify="center" align="center">
     <header className="App-header">
       <LogoContainer src={sbi} className="App-logo" alt="logo" />
-      <StudioName>Other Work</StudioName>
+      <PageHeader>Other Work</PageHeader>
     </header>
   </div>
 );

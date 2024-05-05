@@ -2,6 +2,7 @@ import sbi from "../resources/images/SBI3.png";
 import LinkButton from "../components/LinkButton.js";
 import { styled } from "styled-components";
 import { TextBlock, SectionHeader } from "../resources/styles.js";
+import { PageHeader } from "../resources/styles";
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -9,12 +10,6 @@ const ButtonContainer = styled.div`
   row-gap: 20px;
   justify-content: center;
   align-items: center;
-`;
-
-const StudioName = styled.h1`
-  color: white;
-  font-family: "Anonymous Pro";
-  font-weight: 700;
 `;
 
 const LogoContainer = styled.img`
@@ -26,7 +21,7 @@ const AboutPage = (
   <div justify="center" align="center">
     <header className="App-header">
       <LogoContainer src={sbi} className="App-logo" alt="logo" />
-      <StudioName>Skullbutton Interactive</StudioName>
+      <PageHeader>Skullbutton Interactive</PageHeader>
     </header>
     {/* <ButtonContainer>
       <LinkButton
